@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ứng tuyển</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="app detail-page">
+        <div class="header detail-header">
+            <div class="logo">
+                <i class="fas fa-file-alt"></i>
+                <h1>Đơn <span>ứng tuyển</span></h1>
+            </div>
+            <div class="header-actions">
+                <a class="btn-login" href="index.html"><i class="fas fa-arrow-left"></i> Về trang chủ</a>
+            </div>
+        </div>
+
+        <div class="detail-card apply-card">
+            <div class="detail-badge" id="applyBadge">Ứng tuyển</div>
+            <h2 id="applyJobTitle">Đang tải...</h2>
+            <p class="apply-subtitle">Vui lòng điền thông tin CV để gửi đến nhà tuyển dụng.</p>
+
+            <form id="applyForm" class="apply-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Họ và tên</label>
+                        <input type="text" id="applicantName" required placeholder="Nhập họ và tên" />
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="applicantEmail" required placeholder="Email liên hệ" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-phone"></i> Số điện thoại</label>
+                        <input type="tel" id="applicantPhone" required placeholder="Số điện thoại" />
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-graduation-cap"></i> Trình độ</label>
+                        <input type="text" id="applicantEducation" placeholder="VD: Đại học, Cao đẳng" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-file-lines"></i> Kinh nghiệm / CV ngắn</label>
+                    <textarea id="applicantExperience" rows="6" placeholder="Mô tả kinh nghiệm, kỹ năng, mục tiêu nghề nghiệp..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-paperclip"></i> File CV (tùy chọn)</label>
+                    <input type="file" id="cvFile" accept=".pdf,.doc,.docx" />
+                    <small class="form-hint">Bạn có thể đính kèm file PDF, DOC hoặc DOCX.</small>
+                </div>
+                <div class="form-actions">
+                    <!-- <a class="btn-cancel" href="index.html">Hủy</a> -->
+                    <button class="btn-submit" type="submit"><i class="fas fa-paper-plane"></i> Gửi CV</button>
+                </div>
+                <div class="auth-message" id="applyMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-storage-compat.js"></script>
+    <script src="/js/apply.js"></script>
+</body>
+</html>

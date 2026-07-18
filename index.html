@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Việc làm · Tìm người · Đăng tin</title>
+    <!-- Font Awesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Link file CSS riêng -->
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+    <div class="app">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-briefcase"></i>
+                <h1>Việc<span>Làm</span></h1>
+            </div>
+            <div class="header-actions">
+                <div class="auth-info">
+                    <span id="authStatus">Khách</span>
+                </div>
+                <button class="btn-login" id="openAuthBtn">
+                    <i class="fas fa-user"></i> Đăng nhập / Đăng ký
+                </button>
+                <button class="btn-profile" id="profileBtn" style="display:none;">
+                    <i class="fas fa-id-badge"></i> Trang cá nhân
+                </button>
+                <button class="btn-logout" id="logoutBtn" style="display:none;">
+                    <i class="fas fa-sign-out-alt"></i> Đăng xuất
+                </button>
+                <button class="btn-post" id="toggleFormBtn">
+                    <i class="fas fa-plus-circle"></i> Đăng tin mới
+                </button>
+            </div>
+        </div>
+
+        <!-- FORM ĐĂNG TIN -->
+        <div class="post-form" id="postForm">
+            <h2><i class="fas fa-pen-fancy" style="color:#2a7de1;"></i> Đăng tin tuyển dụng</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-tag"></i> Tiêu đề *</label>
+                    <input type="text" id="titleInput" placeholder="VD: Tuyển lập trình viên React" />
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-building"></i> Công ty / Tên người đăng</label>
+                    <input type="text" id="companyInput" placeholder="Tên công ty hoặc cá nhân" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-tag"></i> Loại tin</label>
+                    <select id="typeSelect">
+                        <option value="tìm người">Tìm người (tuyển dụng)</option>
+                        <!-- <option value="tìm việc">Tìm việc (ứng tuyển)</option> -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-map-marker-alt"></i> Địa điểm</label>
+                    <input type="text" id="locationInput" placeholder="TP.HCM, Hà Nội, ..." />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-align-left"></i> Mô tả</label>
+                    <textarea id="descInput" placeholder="Mô tả công việc, yêu cầu, quyền lợi..."></textarea>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button class="btn-cancel" id="cancelFormBtn">Hủy</button>
+                <button class="btn-submit" id="submitPostBtn"><i class="fas fa-check"></i> Đăng tin</button>
+            </div>
+        </div>
+
+        <div class="hero-panel">
+            <div>
+                <div class="hero-pill"><i class="fas fa-sparkles"></i> Kết nối việc làm thông minh</div>
+                <h2>Khám phá các cơ hội mới mỗi ngày</h2>
+                <p>Tìm kiếm tin tuyển dụng, đăng tin nhanh chóng và kết nối với ứng viên phù hợp trong một nơi thật dễ dùng.</p>
+            </div>
+            <div class="hero-stats">
+                <div><strong>24/7</strong><span>Truy cập</span></div>
+                <div><strong>100%</strong><span>Thông tin rõ ràng</span></div>
+            </div>
+        </div>
+
+        <!-- BỘ LỌC -->
+        <div class="filter-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Tìm kiếm tin..." />
+            <div class="filter-tabs">
+                <button class="active" data-filter="all">Tất cả</button>
+                <!-- <button data-filter="tìm người">Tuyển dụng</button> -->
+                <!-- <button data-filter="tìm việc">Tìm việc</button> -->
+            </div>
+        </div>
+
+        <!-- DANH SÁCH TIN -->
+        <div id="jobGrid" class="job-grid">
+            <!-- Các job card sẽ được render bằng JavaScript -->
+        </div>
+    </div>
+
+    <!-- ========== FIREBASE SDK ========== -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+    <!-- ========== AUTH JAVASCRIPT ========== -->
+    <script src="/js/auth.js"></script>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script src="/js/script.js"></script>
+</body>
+</html>

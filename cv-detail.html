@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết CV</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="app detail-page">
+        <div class="header detail-header">
+            <div class="logo">
+                <i class="fas fa-file-alt"></i>
+                <h1>Chi tiết <span>CV</span></h1>
+            </div>
+            <div class="header-actions">
+                <button class="btn-login" id="backBtn">
+                    <i class="fas fa-arrow-left"></i> Quay lại
+                </button>
+            </div>
+        </div>
+
+        <div class="detail-card cv-detail-card">
+            <div class="cv-detail-header">
+                <h2 id="applicantName">Đang tải...</h2>
+                <p id="applicantJobTitle" class="cv-detail-job"></p>
+            </div>
+
+            <div class="cv-detail-section">
+                <h3><i class="fas fa-address-card"></i> Thông tin liên hệ</h3>
+                <div class="cv-detail-info">
+                    <div class="info-row">
+                        <strong>Email:</strong>
+                        <a id="applicantEmail" href="#">email@example.com</a>
+                    </div>
+                    <div class="info-row">
+                        <strong>Điện thoại:</strong>
+                        <a id="applicantPhone" href="#">0123456789</a>
+                    </div>
+                    <div class="info-row" id="educationRow" style="display:none;">
+                        <strong>Trình độ:</strong>
+                        <span id="applicantEducation">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-detail-section">
+                <h3><i class="fas fa-briefcase"></i> Kinh nghiệm / Mô tả CV</h3>
+                <div class="cv-detail-experience" id="applicantExperience">
+                    Đang tải...
+                </div>
+            </div>
+
+            <div class="cv-detail-section" id="cvFileSection" style="display:none;">
+                <h3><i class="fas fa-file-pdf"></i> File CV</h3>
+                <div class="cv-detail-file">
+                    <a id="cvFileLink" href="#" target="_blank" class="btn-apply">
+                        <i class="fas fa-download"></i> Tải file CV
+                    </a>
+                    <span id="cvFileName" class="file-name"></span>
+                </div>
+            </div>
+
+            <div class="cv-detail-meta">
+                <span><i class="fas fa-clock"></i> Ngày nộp: <span id="submittedDate">-</span></span>
+            </div>
+
+            <div class="detail-actions">
+                <a id="backCVListBtn" href="#" class="btn-apply">
+                    <i class="fas fa-list"></i> Quay lại danh sách CV
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="/js/cv-detail.js"></script>
+</body>
+</html>

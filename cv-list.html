@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách CV - Nhà tuyển dụng</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="app">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-briefcase"></i>
+                <h1>Việc<span>Làm</span></h1>
+            </div>
+            <div class="header-actions">
+                <div class="auth-info">
+                    <span id="authStatus">Khách</span>
+                </div>
+                <button class="btn-login" id="backHomeBtn">
+                    <i class="fas fa-home"></i> Về trang chủ
+                </button>
+            </div>
+        </div>
+
+        <!-- DANH SÁCH CV -->
+        <div class="cv-list-container">
+            <div class="cv-list-header">
+                <h2 id="jobTitle">Danh sách CV</h2>
+                <p id="jobInfo"></p>
+            </div>
+
+            <div class="cv-list-wrapper">
+                <div id="cvGrid" class="cv-grid">
+                    <!-- CV items sẽ được render bằng JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="/js/cv-list.js"></script>
+</body>
+</html>

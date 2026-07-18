@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang cá nhân</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="app profile-page">
+        <div class="header profile-header">
+            <div class="logo">
+                <i class="fas fa-user-circle"></i>
+                <h1>Trang <span>Cá nhân</span></h1>
+            </div>
+            <div class="header-actions">
+                <button class="btn-login" id="backHomeBtn"><i class="fas fa-home"></i> Về trang chủ</button>
+                <button class="btn-profile" id="profileAvatarBtn">
+                    <span class="profile-avatar"><i class="fas fa-user"></i></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <h2>Thông tin tài khoản</h2>
+            <div class="profile-item"><strong>Email:</strong> <span id="profileEmail">...</span></div>
+            <div class="profile-item"><strong>Họ tên:</strong> <span id="profileName">...</span></div>
+            <div class="profile-item"><strong>UID:</strong> <span id="profileUid">...</span></div>
+            <div class="profile-item"><strong>Đăng nhập lần cuối:</strong> <span id="profileLastLogin">...</span></div>
+            <div class="profile-actions">
+                <button class="btn-submit" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="/js/profile.js"></script>
+</body>
+</html>
